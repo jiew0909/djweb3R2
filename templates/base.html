@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet"
+        href="{% static 'stylesheets/bt523/css/bootstrap.css' %}">
+    <script src="{% static 'stylesheets/bt523/js/bootstrap.bundle.js'%}"></script>
+    <title>DijiTech Technology & Service </title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row ">
+            <div class="col-lg-12" style="background-color:#053f5c">
+                {% include 'header.html' %}
+            </div>
+        </div>
+
+        <div class="row">
+             <div class="col-lg-3" style="background-color:#429ebd">
+                {% include 'menu.html' %}
+            </div>
+             <div class="col-lg-9" style="background-color:#9fe7f5">
+                {% block content %} {% endblock  %}
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

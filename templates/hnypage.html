@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <h1 class="bg-warning text-primary text-center">Welcome to Winter </h1>
+    <h2 class="bg-info text-danger text-center">
+        Merry Christmas and Happy New Year 2023
+    </h2><br>
+{#  <hr width="50"> #}
+    <p class="bg-secondary text-dark text-center">
+        <hr width="50%" class="text-center" size="5">
+    </p>
+    <br>
+    <p class="bg-success text-white text-center">
+        <img src="{% static 'images/91.jpg' %}"
+        class="rounded-circle" width="150px" height="150px">
+        <i>"คำบางคำคนพูดไม่เคยจำ แต่คนฟังไม่เคยลืม </i></p>
+    <br>
+    สิ่งที่สนใจ:
+    <url type="square" class="list-group">
+        <li class="list-group-item-primary">สิ่งที่สนใจ:</li>
+        <li class="list-group-item">Game</li>
+        <li class="list-group-item">Movie</li>
+        <li class="list-group-item">Song</li>
+        <li class="list-group-item">Sleeping</li>
+        <li class="list-group-item">Eating</li>
+    </url>
+
+    Favories web site:
+    <ol type="A" class="list-group">
+        <li class="list-group-item-warning">Favories web site: </li>
+        <li class="list-group-item"><a href="https://Line.com" target="_blank">Line</a> </li>
+        <li class="list-group-item"><a href="https://instagram.com" target="_blank">instagram</a> </li>
+        <li class="list-group-item"><a href="https://Facebook.com" target="_blank">Facebook</a> </li>
+        <li class="list-group-item"><a href="https://Pinterest.com" target="_blank">Pinterest</a> </li>
+        <li class="list-group-item">
+         <a href="https://wwwgooglecom" target="_blank">
+             <img src="{% static 'images/2022.png' %}" width="100px" height="55px">
+         </a>
+        </li>
+    </ol>
+    <a href="/FirsetPage" class="btn-success"> FirstPage</a><br>
+    <a href="{% url 'firstPage'%}" class="btn-primary">first Page</a>
+    <a href="{% url 'Secondpage'%}" class="btn-warning">Second page</a>
+    <a href="{% url 'thirdpahe'%}" class="btn-warning">third pahe</a>
+
+{% endblock%}
